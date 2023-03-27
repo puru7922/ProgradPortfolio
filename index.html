@@ -49,7 +49,9 @@
                             messages.push('Hello');
 
                             function cycle() {
-                                $('#some-id').html(messages[index]);
+                                console.log()
+                                if(document.getElementById('some-id'))
+                                document.getElementById('some-id').innerHTML = messages[index];
                                 index++;
 
                                 if (index === messages.length) {
@@ -57,7 +59,7 @@
                                 }
 
                                 setTimeout(cycle, 1000);
-                                console.log("Hey test")
+                               
                             }
 
                             cycle();
